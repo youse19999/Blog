@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'CellGFX'
+project = 'Blog'
 copyright = '2026, Yousei Saitou'
 author = 'Yousei Saitou'
 
