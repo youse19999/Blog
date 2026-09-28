@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # ここに対象のパスを指定します
-          path: 'Blog/Sphinx/Out/html/'
+          path: 'Sphinx/Out/html/'
 
       # GitHub Pages へデプロイ
       - name: Deploy to GitHub Pages
