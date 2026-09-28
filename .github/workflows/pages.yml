@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # トリガーにするブランチ（master の場合は master に変更）
+  workflow_dispatch: # 手動実行を許可
+
+# GitHub Pages への書き込み権限と ID トークン発行の権限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時デプロイの競合を防止
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # -------------------------------------------------------------
+      # ※ Sphinx のビルドを GitHub Actions 内で行う場合はここにビルドステップを挟みます
+      # -------------------------------------------------------------
+
+      # 公開対象ディレクトリをアーティファクトとしてアップロード
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # ここに対象のパスを指定します
+          path: 'Blog/Sphinx/Out/html/'
+
+      # GitHub Pages へデプロイ
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
