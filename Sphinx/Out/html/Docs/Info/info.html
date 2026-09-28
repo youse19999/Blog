@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CellGFXの紹介 &#8212; CellGFX  ドキュメント</title>
+    <title>ようこそ &#8212; CellGFX  ドキュメント</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css?v=34905f61" />
     <script src="../../_static/documentation_options.js?v=c033477b"></script>
@@ -27,7 +27,7 @@
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">CellGFX  ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">CellGFX</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">CellGFXの紹介</a></li> 
+        <li class="nav-item nav-item-this"><a href="">ようこそ</a></li> 
       </ul>
     </div>  
 
@@ -36,44 +36,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="cellgfx">
-<h1>CellGFXの紹介<a class="headerlink" href="#cellgfx" title="Link to this heading">¶</a></h1>
-<p>CellGFXはCPPですべてが記述可能なゲームエンジンです。</p>
-<p>「高度で密度が高くシンプル」を目指しています。</p>
-<p>使用するにはある程度の高度な知識が必要です。</p>
-<section id="id1">
-<h2>使い方<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;CMakeProject4.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;d3d11.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_gfx_dx11_config.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_wit.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_wit_data.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_transformation.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_gameobject.h&gt;</span>
-<span class="cp">#include</span><span class="cpf">&lt;cell_data.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_gfx_dx11.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cell_gfx.h&gt;</span>
-
-<span class="c1">//COUT</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">	</span><span class="n">gameObjects</span><span class="p">[</span><span class="s">&quot;triangle&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ExampleCellGameObject</span><span class="p">();</span>
-
-<span class="w">	</span><span class="n">CellGFX</span><span class="o">*</span><span class="w"> </span><span class="n">gfx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CellGFX</span><span class="p">();</span>
-<span class="w">	</span><span class="n">gfx</span><span class="o">-&gt;</span><span class="n">Run</span><span class="p">();</span>
-
-<span class="w">	</span><span class="k">delete</span><span class="w"> </span><span class="n">gfx</span><span class="p">;</span>
-
-<span class="w">	</span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">cellData</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">cellDataMap</span><span class="p">)</span>
-<span class="w">	</span><span class="p">{</span>
-<span class="w">		</span><span class="k">delete</span><span class="w"> </span><span class="n">cellData</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
-<span class="w">	</span><span class="p">}</span>
-<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>基本的にこの宣言のみでゲームが動きます。</p>
-</section>
+  <section id="id1">
+<h1>ようこそ<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
 </section>
 
 
@@ -86,16 +50,6 @@
             <p class="logo"><a href="../../index.html">
               <img class="logo" src="../../_static/logo.png" alt="Logo of CellGFX"/>
             </a></p>
-  <div>
-    <h3><a href="../../index.html">目次</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">CellGFXの紹介</a><ul>
-<li><a class="reference internal" href="#id1">使い方</a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
   <div>
     <h4>前のトピックへ</h4>
     <p class="topless"><a href="../index.html"
@@ -133,7 +87,7 @@
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">CellGFX  ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >CellGFX</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">CellGFXの紹介</a></li> 
+        <li class="nav-item nav-item-this"><a href="">ようこそ</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
